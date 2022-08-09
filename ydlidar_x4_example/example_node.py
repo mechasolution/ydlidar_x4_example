@@ -10,7 +10,7 @@ from rclpy.qos import QoSDurabilityPolicy, QoSHistoryPolicy, QoSReliabilityPolic
 import math
 
 
-class MechaAutoshipLidarNode(Node):
+class YdlidarX4Example(Node):
     def __init__(self):
         super().__init__("ydlidar_x4_example")
         self.get_logger().info("ydlidar_x4_example Start")
@@ -64,7 +64,7 @@ class MechaAutoshipLidarNode(Node):
 def main(args=None):
     rclpy.init(args=args)
 
-    ydlidar_x4_example = MechaAutoshipLidarNode()
+    ydlidar_x4_example = YdlidarX4Example()
 
     rclpy.spin(ydlidar_x4_example)
     ydlidar_x4_example.destroy_node()
